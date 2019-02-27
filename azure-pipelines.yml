@@ -13,10 +13,10 @@ steps:
   continueOnError: true
 
 - task: PublishTestResults@2
-    displayName: 'Publish Test Results'
-    condition: succeededOrFailed()
-    inputs:
-       testResultsFiles: '$(System.DefaultWorkingDirectory)/test-report.xml'
+  displayName: 'Publish Test Results'
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/test-report.xml'
 
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish Code Coverage'
